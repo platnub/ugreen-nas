@@ -24,3 +24,12 @@
            ```
            cd /volume1/komodo && docker compose -p komodo -f docker/mongo.compose.yaml --env-file docker/compose.env up -d
            ```
+6. Deploy a Cloudflared container using the TUNNEL_TOKEN
+7. Deploy Nextcloud and connect to https://IP:8080
+    1. Save the Passphrase
+    2. Continue setup and submit subdomain
+    3. Optional apps:
+        1. ClamAV
+        2. Collabora
+        3. Imaginary
+    4. Download and start containers
