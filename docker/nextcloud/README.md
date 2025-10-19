@@ -1,15 +1,22 @@
 # Manuals
 ## Setup
-1. Deploy Nextcloud using the [compose.yml](https://raw.githubusercontent.com/platnub/mundkur/refs/heads/main/docker/nextcloud/compose.yml?token=GHSAT0AAAAAADNNPT5MLWZ4ZO2E2LS3XYP42HT6TRA) and [.env](https://raw.githubusercontent.com/platnub/mundkur/refs/heads/main/docker/nextcloud/.env?token=GHSAT0AAAAAADNNPT5M4NPELLNSDHPOHYSQ2HT6TZA) and connect to https://IP:8080
-    1. Save the Passphrase
-    2. Continue setup and submit subdomain
-    3. Optional apps:
+1. Deploy Nextcloud using the [compose.yml](https://raw.githubusercontent.com/platnub/mundkur/refs/heads/main/docker/nextcloud/compose.yml?token=GHSAT0AAAAAADNNPT5MLWZ4ZO2E2LS3XYP42HT6TRA) and [.env](https://raw.githubusercontent.com/platnub/mundkur/refs/heads/main/docker/nextcloud/.env?token=GHSAT0AAAAAADNNPT5M4NPELLNSDHPOHYSQ2HT6TZA)
+    1. Enable port 8080 in the Docker configuration
+    2. Connect to https://<IP>:8080
+    3. Save the Passphrase
+    4. Continue setup and submit subdomain
+    5. Optional apps:
         1. ClamAV
         2. Collabora
         3. Imaginary
-    4. Download and start containers
-2. Connect to the Ugreen NAS using SSH
-    1. Run `docker exec --user www-data -it nextcloud-aio-nextcloud php occ files:scan-app-data preview -vvv` to scan app-data folder and check data permissions are correct
+    6. Download and start containers
+    7. Disable port 8080 in the Docker configuration and destroy & deploy the containers
+2. Open the terminal of container 'nextcloud-aio-nextcloud'
+    1. Run `php occ files:scan-app-data preview -vvv` to scan app-data folder and check data permissions are correct
+    2. Run `occ maintenance:repair --include-expensive`
+3. Configre Collabora
+    1. Go into administrative settings > office
+    2. Append the [Cloudflare IPv4 addresses](https://www.cloudflare.com/en-gb/ips/) to the WOPI allow-list.
 
 ## SMTP email setup Google
 
