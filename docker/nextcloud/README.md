@@ -8,6 +8,9 @@
         2. Collabora
         3. Imaginary
     4. Download and start containers
+2. Connect to the Ugreen NAS using SSH
+    1. Run `docker exec --user www-data -it nextcloud-aio-nextcloud php occ files:scan-app-data preview -vvv` to scan app-data folder and check data permissions are correct
+
 ## SMTP email setup Google
 
 >[!IMPORTANT]
