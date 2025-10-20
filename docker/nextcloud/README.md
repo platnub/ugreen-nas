@@ -23,7 +23,7 @@
 >[!IMPORTANT]
 > Test email may fail because the admin account has an invalid email
 
-1. Create app password
+1. Create app password for Google account
 2. Fill in credentials:
     1. Send mode: 'SMTP'
     2. Encryption: 'SSL'
