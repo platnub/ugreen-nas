@@ -2,7 +2,7 @@
 ## Setup
 1. Deploy Nextcloud using the [compose.yml](https://raw.githubusercontent.com/platnub/mundkur/refs/heads/main/docker/nextcloud/compose.yml?token=GHSAT0AAAAAADNNPT5MLWZ4ZO2E2LS3XYP42HT6TRA) and [.env](https://raw.githubusercontent.com/platnub/mundkur/refs/heads/main/docker/nextcloud/.env?token=GHSAT0AAAAAADNNPT5M4NPELLNSDHPOHYSQ2HT6TZA)
     1. Enable port 8080 in the Docker configuration
-    2. Connect to https://<IP>:8080
+    2. Connect to https://IP:8080
     3. Save the Passphrase
     4. Continue setup and submit subdomain
     5. Optional apps:
