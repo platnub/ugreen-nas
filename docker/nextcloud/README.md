@@ -13,7 +13,7 @@
     7. Disable port 8080 in the Docker configuration and destroy & deploy the containers
 2. Open the terminal of container 'nextcloud-aio-nextcloud'
     1. Run `php occ files:scan-app-data preview -vvv` to scan app-data folder and check data permissions are correct
-    2. Run `occ maintenance:repair --include-expensive`
+    2. Run `php occ maintenance:repair --include-expensive`
 3. Configre Collabora
     1. Go into administrative settings > office
     2. Append the [Cloudflare IPv4 addresses](https://www.cloudflare.com/en-gb/ips/) to the WOPI allow-list.
