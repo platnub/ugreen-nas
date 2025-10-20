@@ -11,7 +11,7 @@
         3. Imaginary
     6. Download and start containers
     7. Disable port 8080 in the Docker configuration and destroy & deploy the containers
-2. Open the terminal of container 'nextcloud-aio-nextcloud'
+2. Open the terminal of container 'nextcloud-aio-nextcloud' using Komodo
     1. Run `php occ files:scan-app-data preview -vvv` to scan app-data folder and check data permissions are correct
     2. Run `php occ maintenance:repair --include-expensive`
 3. Configre Collabora
